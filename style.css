@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
+:root {
+  --color-cyan: hsl(171, 66%, 44%);
+  --color-blue: hsl(233, 100%, 69%);
+
+  --color-dark-grey: hsl(210, 10%, 33%);
+  --color-grey: hsl(201, 11%, 66%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-grey);
+}
+
+@media screen and (max-width: 900px) {
+  * {
+    font-size: 16px;
+  }
+}
+
+body {
+  background-image: url(img/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url(img/bg-header-mobile.png);
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: var(--color-dark-grey);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.img-big {
+  max-width: 100%;
+}
+
+.logo {
+  margin-bottom: 3rem;
+  transform: scale(1.2);
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.btn + .btn {
+  margin-left: 2rem;
+}
+
+.btn-green {
+  background-color: var(--color-cyan);
+}
+
+.btn-blue {
+  background-color: var(--color-blue);
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+@media screen and (max-width: 900px) {
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn {
+    margin-bottom: 1rem;
+  }
+
+  .btn + .btn {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .btn-group {
+    max-width: 100%;
+  }
+
+  .btn {
+    padding: 0.75rem 4rem;
+  }
+}
+
+.container {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8rem;
+}
+
+.content > p {
+  margin-bottom: 2rem;
+}
+
+.container > * + * {
+  margin-top: 6rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    max-width: 90%;
+  }
+}
+
+.two-columns {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 6rem 0 6rem 35rem;
+}
+
+.two-columns .img-wrapper {
+  position: absolute;
+  left: -40rem;
+  top: -2rem;
+}
+
+.two-columns .text-stack {
+  width: 50%;
+}
+
+.two-columns .text-stack > * + p {
+  margin-bottom: 2rem;
+}
+
+.two-columns .text-stack p,
+.two-columns .text-stack h3 {
+  text-align: left;
+}
+
+.three-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 80%;
+  margin-top: 4rem;
+  max-height: 12rem;
+}
+
+.three-columns .column {
+  max-width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 12rem;
+}
+
+@media screen and (max-width: 900px) {
+  .three-columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 90%;
+    margin-top: 4rem;
+    max-height: 34rem;
+  }
+
+  .three-columns .column {
+    max-width: 90%;
+    height: 32rem;
+  }
+}
+
+.column .icon {
+  margin-bottom: 1rem;
+}
+
+.clients {
+  max-width: 91%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.clients > img {
+  margin-top: 1rem;
+}
+
+.clients > img + * {
+  margin-left: 5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .clients > img {
+    transform: scale(0.8);
+  }
+}
+
+.content:last-of-type {
+  margin-bottom: 6rem;
+}
+
+footer {
+  background-color: rgba(211, 211, 211, 0.3);
+  color: var(--color-dark-grey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 10rem;
+  max-width: 100%;
+}
+
+footer .logo-footer {
+  width: 4rem;
+  height: 4rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
+}
+
+.footer-nav .col {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+}
+
+@media screen and (max-width: 1200px) {
+  footer {
+    padding: 3rem 3rem;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%;
+  }
+
+  .footer-nav .col {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+  }
+}
+
+.footer-nav a:hover {
+  color: var(--color-cyan);
+}
+
+.col > a + a {
+  margin-top: 1rem;
+}
+
+.footer-nav .col:last-of-type {
+  max-height: 100%;
+  padding-bottom: 1rem;
+}
+
+.nav-social img {
+  transform: scale(1.4);
+}
+
+.nav-social > img + * {
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+
+  .footer-nav .col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .col > a + a {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer > * {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .two-columns {
+    flex-direction: column;
+    position: relative;
+    margin: 4rem 0;
+  }
+
+  .two-columns .img-wrapper {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-bottom: 4rem;
+  }
+
+  .two-columns .text-stack {
+    width: 100%;
+  }
+
+  .two-columns .text-stack > * + p {
+    margin-bottom: 2rem;
+  }
+
+  .two-columns .text-stack p,
+  .two-columns .text-stack h3 {
+    text-align: center;
+  }
+
+  .clients {
+    margin-top: 8rem;
+    max-width: 91%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clients > img {
+    margin-top: 2rem;
+  }
+
+  .clients > img + * {
+    margin-left: 0rem;
+  }
+}
